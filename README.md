@@ -1,8 +1,6 @@
 # LearnPath Engine
 
-> An intelligent learning path recommendation system powered by Matrix Factorization and SGD.
-
-![Dashboard Preview](images/najeeb.jpg) <!-- Placeholder for demo gif/screenshot -->
+![Dashboard Preview](images/preview.png)
 
 LearnPath Engine is a professional-grade recommendation system designed to map interns to the most relevant learning paths based on latent factor analysis. It utilizes a custom implementation of Stochastic Gradient Descent (SGD) to optimize user and item embedding matrices, providing high-precision course suggestions.
 
