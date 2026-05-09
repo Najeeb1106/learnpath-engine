@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PathIQ — Intelligent Learning Paths</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ═══════════════ AUTH OVERLAY ═══════════════ -->
+<div id="auth-overlay">
+  <div class="auth-bg-grid"></div>
+  <div class="auth-glow auth-glow-1"></div>
+  <div class="auth-glow auth-glow-2"></div>
+
+  <div class="auth-card">
+    <div class="auth-logo">
+      <div class="auth-logo-dot"></div>PathIQ
+    </div>
+
+    <div class="auth-tabs">
+      <button class="auth-tab active" onclick="switchAuthTab('login')">Sign in</button>
+      <button class="auth-tab" onclick="switchAuthTab('register')">Create account</button>
+    </div>
+
+    <!-- LOGIN FORM -->
+    <div class="auth-form active" id="auth-login">
+      <div class="demo-creds">
+        🔑 <strong>Demo:</strong> demo@pathiq.ai / <strong>demo123</strong>
+      </div>
+      <div class="auth-error" id="login-error"></div>
+      <div class="auth-field">
+        <label>Email address</label>
+        <input type="email" id="login-email" placeholder="you@example.com" onkeydown="if(event.key==='Enter') doLogin()">
+      </div>
+      <div class="auth-field">
+        <label>Password</label>
+        <div class="pw-wrap">
+          <input type="password" id="login-password" placeholder="Your password" onkeydown="if(event.key==='Enter') doLogin()">
+          <button class="pw-toggle" onclick="togglePw('login-password', this)" type="button">👁</button>
+        </div>
+      </div>
+      <div style="text-align:right; margin-top: -4px; margin-bottom: 12px;">
+        <a style="font-size:12px; color: var(--accent); cursor:pointer; text-decoration:none;" onclick="openForgot()">Forgot password?</a>
+      </div>
+      <button class="auth-btn" onclick="doLogin()" id="login-btn">Sign in →</button>
+      <div class="auth-hint">
+        No account? <a onclick="switchAuthTab('register')">Create one free</a>
+      </div>
+    </div>
+
+    <!-- REGISTER FORM -->
+    <div class="auth-form" id="auth-register">
+      <div class="auth-error" id="register-error"></div>
+      <div class="auth-success-msg" id="register-success"></div>
+      <div class="auth-field-row">
+        <div class="auth-field">
+          <label>First name</label>
+          <input type="text" id="reg-first" placeholder="Aisha">
+        </div>
+        <div class="auth-field">
+          <label>Last name</label>
+          <input type="text" id="reg-last" placeholder="Rizvi">
+        </div>
+      </div>
+      <div class="auth-field">
+        <label>Email address</label>
+        <input type="email" id="reg-email" placeholder="you@example.com">
+      </div>
+      <div class="auth-field">
+        <label>Role</label>
+        <select id="reg-role" style="width:100%; padding:11px 14px; font-size:14px; font-family:'DM Sans',sans-serif; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.12); border-radius:10px; color:#fff; outline:none;">
+          <option value="" style="background:#1c1c28;">Select role...</option>
+          <option value="Intern" style="background:#1c1c28;">Intern</option>
+          <option value="Mentor" style="background:#1c1c28;">Mentor</option>
+          <option value="Admin" style="background:#1c1c28;">Admin</option>
+          <option value="Researcher" style="background:#1c1c28;">Researcher</option>
+        </select>
+      </div>
+      <div class="auth-field">
+        <label>Password</label>
+        <div class="pw-wrap">
+          <input type="password" id="reg-password" placeholder="Min. 8 characters" oninput="updateStrength(this.value)">
+          <button class="pw-toggle" onclick="togglePw('reg-password', this)" type="button">👁</button>
+        </div>
+        <div class="strength-bar"><div class="strength-fill" id="strength-fill" style="width:0;"></div></div>
+      </div>
+      <div class="auth-field">
+        <label>Confirm password</label>
+        <div class="pw-wrap">
+          <input type="password" id="reg-confirm" placeholder="Repeat password">
+          <button class="pw-toggle" onclick="togglePw('reg-confirm', this)" type="button">👁</button>
+        </div>
+      </div>
+      <button class="auth-btn" onclick="doRegister()" id="register-btn">Create account →</button>
+      <div class="auth-hint">
+        Already have an account? <a onclick="switchAuthTab('login')">Sign in</a>
+      </div>
+    </div>
+
+    <div class="auth-footer-note">
+      By continuing, you agree to PathIQ's Terms of Service and Privacy Policy.<br>
+      Your data is encrypted and never shared.
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ FORGOT PASSWORD MODAL ═══════════════ -->
+<div class="modal-overlay" id="forgot-modal">
+  <div class="modal-box">
+    <div class="modal-title">Reset your password</div>
+    <div class="modal-sub">Enter your email and we'll send a reset link.</div>
+    <div class="modal-field">
+      <label>Email address</label>
+      <input type="email" id="forgot-email" placeholder="you@example.com">
+    </div>
+    <div class="modal-actions">
+      <button class="modal-btn-ghost" onclick="closeForgot()">Cancel</button>
+      <button class="modal-btn-primary" onclick="doForgot()">Send reset link</button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ TOAST ═══════════════ -->
+<div class="toast" id="toast"></div>
+
+<!-- ═══════════════ MAIN APP ═══════════════ -->
+<div id="app">
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <div class="logo" onclick="showPage('home')">
+      <div class="logo-dot"></div>PathIQ
+    </div>
+    <ul class="nav-links">
+      <li><a onclick="showPage('home')" id="nav-home" class="active">Home</a></li>
+      <li><a onclick="showPage('system')" id="nav-system">ML System</a></li>
+      <li><a onclick="showPage('about')" id="nav-about">About</a></li>
+      <li><a onclick="showPage('contact')" id="nav-contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <a class="btn-ghost" onclick="showPage('system')" style="cursor:pointer;">Try Demo</a>
+      <div class="user-menu">
+        <button class="user-btn" onclick="toggleUserDropdown()">
+          <div class="user-avatar-sm" id="nav-avatar">?</div>
+          <span id="nav-username">User</span>
+          <span style="color:var(--muted); font-size:12px;">▾</span>
+        </button>
+        <div class="user-dropdown" id="user-dropdown">
+          <div class="dropdown-header">
+            <div class="d-name" id="dd-name">—</div>
+            <div class="d-email" id="dd-email">—</div>
+            <div class="d-role" id="dd-role">—</div>
+          </div>
+          <a class="dropdown-item" onclick="showPage('profile'); closeDropdown();">
+            👤 My Profile
+          </a>
+          <a class="dropdown-item" onclick="showPage('system'); closeDropdown();">
+            ⚙ ML System
+          </a>
+          <div class="dropdown-sep"></div>
+          <a class="dropdown-item danger" onclick="doLogout()">
+            🚪 Sign out
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════ HOME PAGE ═══════════════════════════════════════ -->
+<div id="page-home" class="page active">
+  <div class="container">
+    <div class="hero">
+      <div class="hero-content">
+        <div class="hero-eyebrow fade-up">AI-Powered Learning</div>
+        <h1 class="fade-up-2">Smart paths for every <em>intern</em></h1>
+        <p class="hero-sub fade-up-3">PathIQ uses collaborative filtering and matrix factorization to recommend the exact courses each intern needs — based on what their peers found valuable.</p>
+        <div class="hero-ctas fade-up-3">
+          <a class="btn-primary" onclick="showPage('system')" style="cursor:pointer;">→ Explore the system</a>
+          <a class="btn-ghost" onclick="showPage('about')" style="cursor:pointer;">Learn more</a>
+        </div>
+      </div>
+      <div class="hero-visual fade-up-2">
+        <div class="visual-label">Live recommendation preview</div>
+        <table class="mini-matrix">
+          <thead><tr><th></th><th>Python</th><th>SQL</th><th>ML Basics</th><th>Deep Learning</th><th>NLP</th></tr></thead>
+          <tbody>
+            <tr><td class="rname">Aisha R.</td><td><span class="mc mc5">5</span></td><td><span class="mc mc3">3</span></td><td><span class="mc mc5">5</span></td><td><span class="mc mc4">4</span></td><td><span class="mc mc0">~3.8</span></td></tr>
+            <tr><td class="rname">Ben K.</td><td><span class="mc mc4">4</span></td><td><span class="mc mc5">5</span></td><td><span class="mc mc4">4</span></td><td><span class="mc mc0">~3.1</span></td><td><span class="mc mc0">~2.2</span></td></tr>
+            <tr><td class="rname">Carlos M.</td><td><span class="mc mc5">5</span></td><td><span class="mc mc4">4</span></td><td><span class="mc mc3">3</span></td><td><span class="mc mc0">~2.3</span></td><td><span class="mc mc0">~2.0</span></td></tr>
+          </tbody>
+        </table>
+        <div class="rec-mini">
+          <div class="visual-label">Top picks for Aisha</div>
+          <div class="rec-mini-item"><span style="font-weight:600;font-size:12px;">NLP Methods</span><div class="rec-mini-bar"><div class="rec-mini-fill" style="width:76%;"></div></div><span class="rec-mini-score">3.8</span></div>
+          <div class="rec-mini-item"><span style="font-weight:600;font-size:12px;">REST APIs</span><div class="rec-mini-bar"><div class="rec-mini-fill" style="width:58%;"></div></div><span class="rec-mini-score">2.9</span></div>
+          <div class="rec-mini-item"><span style="font-weight:600;font-size:12px;">Model Deploy</span><div class="rec-mini-bar"><div class="rec-mini-fill" style="width:64%;"></div></div><span class="rec-mini-score">3.2</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-box"><div class="stat-n">94%</div><div class="stat-label">Intern satisfaction rate</div></div>
+      <div class="stat-box"><div class="stat-n">12k+</div><div class="stat-label">Learning paths generated</div></div>
+      <div class="stat-box"><div class="stat-n">0.41</div><div class="stat-label">Avg model RMSE</div></div>
+      <div class="stat-box"><div class="stat-n">8</div><div class="stat-label">Latent factor dimensions</div></div>
+    </div>
+
+    <div class="features-header">
+      <h2>Built on real ML</h2>
+      <p class="section-sub">Everything you need to personalize learning at scale</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card"><div class="feature-icon fi-blue">🧮</div><h3>Matrix Factorization</h3><p>Decomposes the intern × course rating matrix into latent factor vectors, capturing hidden preferences and affinities.</p></div>
+      <div class="feature-card"><div class="feature-icon fi-green">🤝</div><h3>Collaborative Filtering</h3><p>Finds interns with similar learning patterns and surfaces courses loved by peers — no manual tagging needed.</p></div>
+      <div class="feature-card"><div class="feature-icon fi-orange">⚡</div><h3>Real-Time Predictions</h3><p>Predict ratings for unseen courses in milliseconds using pre-trained P and Q factor matrices.</p></div>
+      <div class="feature-card"><div class="feature-icon fi-purple">🎛️</div><h3>Tunable Hyperparams</h3><p>Adjust latent factors, regularization (λ), learning rate (α), and epochs interactively to explore model behavior.</p></div>
+      <div class="feature-card"><div class="feature-icon fi-teal">📊</div><h3>RMSE Monitoring</h3><p>Track validation error live as you retrain. Understand the bias-variance tradeoff through direct experimentation.</p></div>
+      <div class="feature-card"><div class="feature-icon fi-amber">🔄</div><h3>Continuous Learning</h3><p>As interns complete courses and rate them, the model retrains and improves — no cold start for returning users.</p></div>
+    </div>
+  </div>
+
+  <div style="background: var(--white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+    <div class="container">
+      <div class="how-section">
+        <div style="text-align:center; margin-bottom:3rem;">
+          <h2>How the model works</h2>
+          <p class="section-sub">From raw ratings to personalized recommendations</p>
+        </div>
+        <div class="how-grid">
+          <div class="steps-list">
+            <div class="step-item"><div class="step-num active" id="sn1">1</div><div class="step-content"><h3>Collect rating data</h3><p>Gather past intern engagement with courses — completion rates, star ratings, time spent. Build the R (intern × course) matrix.</p></div></div>
+            <div class="step-item"><div class="step-num" id="sn2">2</div><div class="step-content"><h3>Factorize the matrix</h3><p>Approximate R ≈ P × Qᵀ where P (interns × k) and Q (courses × k) are learned latent factor matrices via SGD.</p></div></div>
+            <div class="step-item"><div class="step-num" id="sn3">3</div><div class="step-content"><h3>Predict missing ratings</h3><p>For any unseen (intern, course) pair, compute r̂ = pᵢ · qⱼᵀ. These predicted scores rank candidate courses.</p></div></div>
+            <div class="step-item"><div class="step-num" id="sn4">4</div><div class="step-content"><h3>Surface top-N recommendations</h3><p>Sort predicted ratings, filter out already-completed courses, and surface the top-N modules for each intern.</p></div></div>
+          </div>
+          <div class="step-visual">
+            <div class="step-visual-title">Latent factor space</div>
+            <div style="font-size:12px; color:var(--muted); margin-bottom:14px;">Each cell = one latent feature weight</div>
+            <div class="factor-grid" id="factor-display"></div>
+            <div style="margin-top:16px; font-size:12px; color:var(--muted);"><strong style="color:var(--ink);">P matrix</strong> — 5 interns × 8 factors.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div style="text-align:center; padding: 5rem 0;">
+      <h2>Ready to personalize learning?</h2>
+      <p class="section-sub" style="margin-bottom:2rem;">Try the interactive ML system or get in touch to deploy PathIQ at your organization.</p>
+      <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+        <a class="btn-primary" onclick="showPage('system')" style="padding:12px 32px; font-size:15px; border-radius:30px; cursor:pointer;">Try the system →</a>
+        <a class="btn-ghost" onclick="showPage('contact')" style="padding:12px 28px; font-size:15px; border-radius:30px; cursor:pointer;">Contact us</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════ PROFILE PAGE ═══════════════════════════════════════ -->
+<div id="page-profile" class="page">
+  <div class="container">
+    <div class="profile-hero">
+      <div class="pill pill-blue" style="margin-bottom:1rem;">👤 Account</div>
+      <h1>My Profile</h1>
+    </div>
+
+    <!-- Profile Info -->
+    <div class="profile-card">
+      <div class="profile-header">
+        <div class="profile-avatar" id="profile-avatar-big">?</div>
+        <div class="profile-info">
+          <h2 id="profile-display-name">—</h2>
+          <p id="profile-display-email">—</p>
+          <div class="profile-badge" id="profile-display-role">—</div>
+        </div>
+      </div>
+      <div class="profile-grid">
+        <div class="profile-field">
+          <label>First name</label>
+          <input type="text" id="pf-first" placeholder="First name">
+        </div>
+        <div class="profile-field">
+          <label>Last name</label>
+          <input type="text" id="pf-last" placeholder="Last name">
+        </div>
+        <div class="profile-field">
+          <label>Email address</label>
+          <input type="email" id="pf-email" placeholder="your@email.com">
+        </div>
+        <div class="profile-field">
+          <label>Role</label>
+          <select id="pf-role">
+            <option value="Intern">Intern</option>
+            <option value="Mentor">Mentor</option>
+            <option value="Admin">Admin</option>
+            <option value="Researcher">Researcher</option>
+          </select>
+        </div>
+        <div class="profile-field" style="grid-column: 1 / -1;">
+          <label>Organization</label>
+          <input type="text" id="pf-org" placeholder="Your company or university">
+        </div>
+      </div>
+      <div class="profile-actions">
+        <button class="btn-save" onclick="saveProfile()">Save changes</button>
+        <button class="btn-cancel-profile" onclick="loadProfile()">Reset</button>
+      </div>
+      <div class="save-success" id="profile-save-success">✅ Profile updated successfully!</div>
+    </div>
+
+    <!-- Security -->
+    <div class="profile-card">
+      <h2 style="font-size:20px; margin-bottom:1.5rem;">Security</h2>
+      <div class="security-item">
+        <div class="security-item-info">
+          <h4>Password</h4>
+          <p>Last changed: upon registration</p>
+        </div>
+        <button class="btn-ghost" style="font-size:13px; padding: 7px 16px;" onclick="openChangePassword()">Change password</button>
+      </div>
+      <div class="security-item">
+        <div class="security-item-info">
+          <h4>Email verified</h4>
+          <p>Your email address is confirmed</p>
+        </div>
+        <span class="security-badge badge-green">✓ Verified</span>
+      </div>
+      <div class="security-item">
+        <div class="security-item-info">
+          <h4>Two-factor authentication</h4>
+          <p>Add an extra layer of security to your account</p>
+        </div>
+        <span class="security-badge badge-orange">Not enabled</span>
+      </div>
+    </div>
+
+    <!-- Active sessions -->
+    <div class="profile-card" style="margin-bottom: 5rem;">
+      <h2 style="font-size:20px; margin-bottom:1rem;">Active Sessions</h2>
+      <p style="font-size:14px; color:var(--muted); margin-bottom:1.25rem;">Devices currently signed in to your PathIQ account.</p>
+      <div class="session-list">
+        <div class="session-item current">
+          <div>
+            <div class="session-device">💻 Current browser</div>
+            <div class="session-meta">This session · Active now</div>
+          </div>
+          <span style="font-size:12px; color:var(--success); font-weight:500;">Current</span>
+        </div>
+        <div class="session-item" id="session-2" style="display:none;">
+          <div>
+            <div class="session-device">📱 Mobile — Chrome</div>
+            <div class="session-meta">Lahore, PK · 2 hours ago</div>
+          </div>
+          <button class="btn-revoke" onclick="revokeSession('session-2')">Revoke</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════ SYSTEM PAGE ═══════════════════════════════════════ -->
+<div id="page-system" class="page">
+  <div class="container">
+    <div class="system-hero">
+      <div class="pill pill-blue" style="margin-bottom:1rem;">⚙ Interactive ML System</div>
+      <h1>Learning Path Recommendation Engine</h1>
+      <p>Select an intern, explore their personalized recommendations, view the rating matrix, and tune the matrix factorization model live.</p>
+    </div>
+    <div class="system-layout">
+      <div class="system-sidebar">
+        <ul class="sys-nav">
+          <li><a onclick="showSys('overview')" class="active" id="sysnav-overview">📊 Overview</a></li>
+          <li><a onclick="showSys('recommend')" id="sysnav-recommend">🎯 Recommendations</a></li>
+          <li><a onclick="showSys('matrix')" id="sysnav-matrix">🔢 Rating Matrix</a></li>
+          <li><a onclick="showSys('model')" id="sysnav-model">⚙ Model Config</a></li>
+        </ul>
+      </div>
+      <div class="system-main">
+        <!-- Overview -->
+        <div class="sys-section active" id="sys-overview">
+          <div class="ml-controls-grid" style="grid-template-columns:repeat(4,1fr);">
+            <div class="ml-card"><div class="ml-card-label">Model Type</div><div class="ml-big">MF</div><div class="ml-sub">Matrix Factorization</div></div>
+            <div class="ml-card"><div class="ml-card-label">Latent Factors</div><div class="ml-big" id="ov-k">8</div><div class="ml-sub">hidden dimensions</div></div>
+            <div class="ml-card"><div class="ml-card-label">Validation RMSE</div><div class="ml-big" id="ov-rmse">0.41</div><div class="ml-sub">lower = better</div></div>
+            <div class="ml-card"><div class="ml-card-label">Coverage</div><div class="ml-big">8</div><div class="ml-sub">course modules</div></div>
+          </div>
+          <div style="background:var(--white); border:1px solid var(--border); border-radius:var(--radius); padding:1.5rem; margin-bottom:1.5rem;">
+            <h3 style="font-size:16px; font-weight:600; margin-bottom:1rem;">System Overview</h3>
+            <p style="font-size:14px; color:var(--muted); line-height:1.7;">This recommendation engine uses Matrix Factorization (MF) via Stochastic Gradient Descent (SGD) to learn latent representations of both interns and courses. The model factorizes the sparse rating matrix R ≈ P × Qᵀ, enabling prediction of unobserved ratings and generation of personalized ranked course lists for each intern.</p>
+          </div>
+          <div style="background:var(--white); border:1px solid var(--border); border-radius:var(--radius); padding:1.5rem;">
+            <h3 style="font-size:14px; font-weight:600; margin-bottom:0.75rem;">Intern Summary</h3>
+            <table style="width:100%; border-collapse:collapse; font-size:13px;">
+              <thead><tr style="border-bottom:1px solid var(--border);"><th style="text-align:left;padding:6px 0; color:var(--muted); font-weight:500;">Intern</th><th style="text-align:left;padding:6px 0; color:var(--muted); font-weight:500;">Role</th><th style="text-align:left;padding:6px 0; color:var(--muted); font-weight:500;">Focus</th><th style="text-align:center;padding:6px 0; color:var(--muted); font-weight:500;">Rated</th><th style="text-align:right;padding:6px 0; color:var(--muted); font-weight:500;">Action</th></tr></thead>
+              <tbody id="overview-table"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Recommendations -->
+        <div class="sys-section" id="sys-recommend">
+          <div class="intern-tabs" id="intern-tabs-container"></div>
+          <div style="background:var(--white); border:1px solid var(--border); border-radius:var(--radius); padding:1.25rem; margin-bottom:1.5rem; display:grid; grid-template-columns:repeat(4,1fr); gap:1rem;">
+            <div><div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px;">Focus</div><div style="font-size:14px;font-weight:600;" id="sr-focus">—</div></div>
+            <div><div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px;">Role</div><div style="font-size:14px;font-weight:600;" id="sr-role">—</div></div>
+            <div><div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px;">Completed</div><div style="font-size:14px;font-weight:600;" id="sr-done">—</div></div>
+            <div><div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px;">Similar to</div><div style="font-size:13px;font-weight:500;color:var(--muted);" id="sr-similar">—</div></div>
+          </div>
+          <div class="rec-cards" id="rec-cards-container"></div>
+        </div>
+
+        <!-- Matrix -->
+        <div class="sys-section" id="sys-matrix">
+          <div class="matrix-container">
+            <div class="matrix-header"><h3>Intern × Course Rating Matrix</h3><p>Observed ratings (colored) · Predicted scores (~) · Missing (—)</p></div>
+            <div class="matrix-body"><table class="rating-matrix" id="sys-matrix-table"></table></div>
+          </div>
+        </div>
+
+        <!-- Model Config -->
+        <div class="sys-section" id="sys-model">
+          <div class="sys-metrics-grid" style="margin-bottom:1.5rem;">
+            <div class="sys-metric-card">
+              <div class="sys-metric-label">Training RMSE</div>
+              <div class="sys-metric-val" id="sys-rmse">0.39</div>
+              <div class="sys-metric-sub">Lower is better</div>
+            </div>
+            <div class="sys-metric-card">
+              <div class="sys-metric-label">Precision@3</div>
+              <div class="sys-metric-val" id="sys-precision">0.00</div>
+              <div class="sys-metric-sub">Relevance accuracy</div>
+            </div>
+            <div class="sys-metric-card">
+              <div class="sys-metric-label">Recall@3</div>
+              <div class="sys-metric-val" id="sys-recall">0.00</div>
+              <div class="sys-metric-sub">Coverage of interests</div>
+            </div>
+            <div class="sys-metric-card">
+              <div class="sys-metric-label">Stability</div>
+              <div class="sys-metric-val" id="sys-loss" style="font-size:1.5rem;">—</div>
+              <div class="sys-metric-sub" id="sys-conv-sub">Stable at epoch 0</div>
+            </div>
+          </div>
+
+          <!-- Benchmarks & Chart -->
+          <div class="settings-card" style="margin-top:0; margin-bottom:1.5rem;">
+            <div class="card-header">Model Performance</div>
+            <div style="padding: 1rem;">
+              <!-- Loss Curve -->
+              <div style="margin-bottom: 1.5rem;">
+                <div style="font-size: 11px; font-weight: 700; color: var(--muted); text-transform: uppercase; margin-bottom: 8px;">Training Loss Curve</div>
+                <div style="background:var(--accent-light); border-radius:8px; padding:0.5rem; height:140px;">
+                  <canvas id="lossChart"></canvas>
+                </div>
+              </div>
+
+              <!-- Latent Factors Link -->
+              <div style="margin-bottom: 1.5rem;">
+                <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem;">
+                  <span style="font-size:12px; font-weight:600; color:var(--muted);">Latent Factors (P Matrix)</span>
+                  <span style="font-size:11px; color:var(--accent); font-weight:600; cursor:pointer;" onclick="showSys('matrix')">View Full Matrix →</span>
+                </div>
+              </div>
+
+              <!-- Benchmark List -->
+              <div class="benchmark-list" style="display: flex; flex-direction: column; gap: 8px; border-top: 1px solid var(--border); padding-top: 1rem;">
+                <div class="benchmark-item" style="display: flex; justify-content: space-between; font-size: 13px;">
+                  <span>Matrix Factorization (Current)</span>
+                  <span id="bm-mf" style="font-weight: 600; color: var(--primary);">—</span>
+                </div>
+                <div class="benchmark-item" style="display: flex; justify-content: space-between; font-size: 13px;">
+                  <span>Intern Mean (Baseline)</span>
+                  <span id="bm-im" style="color: var(--muted);">—</span>
+                </div>
+                <div class="benchmark-item" style="display: flex; justify-content: space-between; font-size: 13px;">
+                  <span>Global Mean (Baseline)</span>
+                  <span id="bm-gm" style="color: var(--muted);">—</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="background:var(--white); border:1px solid var(--border); border-radius:var(--radius); padding:1.5rem;">
+            <h3 style="font-size:15px; font-weight:600; margin-bottom:1.25rem;">Hyperparameters</h3>
+            <div class="param-grid">
+              <div class="param-item"><label>Latent factors (k) <span id="p-k-val">8</span></label><input type="range" min="2" max="20" value="8" oninput="updateParam('k',this.value)"></div>
+              <div class="param-item"><label>Regularization (λ) <span id="p-lam-val">0.01</span></label><input type="range" min="1" max="10" value="3" oninput="updateParam('lam',this.value)"></div>
+              <div class="param-item"><label>Learning rate (α) <span id="p-lr-val">0.01</span></label><input type="range" min="1" max="10" value="5" oninput="updateParam('lr',this.value)"></div>
+              <div class="param-item"><label>Epochs <span id="p-ep-val">100</span></label><input type="range" min="10" max="500" value="100" step="10" oninput="updateParam('ep',this.value)"></div>
+            </div>
+            <div style="display:flex; gap:10px; margin-top:1rem;">
+              <button class="run-model-btn" onclick="runSysModel()" id="sys-run-btn" style="flex:1;">▶ Train model</button>
+              <button class="run-model-btn" onclick="resetToTrained()" style="background:var(--accent-light); color:var(--accent); border:1px solid var(--accent); flex:1;">↺ Reset artifacts</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════ ABOUT PAGE ═══════════════════════════════════════ -->
+<div id="page-about" class="page">
+  <div class="container">
+    <div class="about-hero">
+      <div class="about-hero-inner">
+        <div class="pill pill-green" style="margin-bottom:1rem;">🧠 About PathIQ</div>
+        <h1>Building smarter learning experiences with machine learning</h1>
+      </div>
+    </div>
+    <div class="about-body">
+      <div class="about-text">
+        <p>PathIQ was built to solve a real problem: in most internship programs, everyone gets the same generic reading list. But interns arrive with wildly different backgrounds, move at different speeds, and are drawn to different specializations.</p>
+        <p><strong>Collaborative filtering</strong> lets us learn from the collective patterns of past interns. If Aisha and Carlos both loved Python and ML Fundamentals, and Carlos went on to rate REST APIs highly, we can predict that Aisha would too — even if she hasn't taken it yet.</p>
+        <p>The core algorithm is <strong>Matrix Factorization via SGD</strong>. We decompose a sparse rating matrix R into two dense latent factor matrices — P (interns) and Q (courses) — such that their dot product approximates R. The latent dimensions capture abstract concepts like "prefers theoretical content" or "data-engineering oriented."</p>
+        <p>We minimize the regularized squared error: <code>L = Σ(r_ui − pᵢ·qⱼᵀ)² + λ(‖pᵢ‖² + ‖qⱼ‖²)</code> using stochastic gradient descent across observed ratings only.</p>
+      </div>
+      <div class="about-sidebar">
+        <div class="sidebar-card">
+          <h4>Tech stack</h4>
+          <span class="tech-tag">Python</span><span class="tech-tag">NumPy</span><span class="tech-tag">Pandas</span><span class="tech-tag">SGD</span><span class="tech-tag">RMSE</span><span class="tech-tag">HTML/CSS/JS</span>
+        </div>
+        <div class="sidebar-card">
+          <h4>Key metrics</h4>
+          <div style="font-size:14px; margin-bottom:8px;"><strong>0.41</strong> <span style="color:var(--muted); font-size:13px;">Validation RMSE</span></div>
+          <div style="font-size:14px; margin-bottom:8px;"><strong>8</strong> <span style="color:var(--muted); font-size:13px;">Latent factors</span></div>
+          <div style="font-size:14px;"><strong>94%</strong> <span style="color:var(--muted); font-size:13px;">Satisfaction rate</span></div>
+        </div>
+        <div class="sidebar-card">
+          <h4>Approach</h4>
+          <p style="font-size:13px; color:var(--muted); line-height:1.6;">Memory-based CF + Model-based MF hybrid. Cold-start handled via content features.</p>
+        </div>
+      </div>
+    </div>
+    <h2 style="margin-bottom:1.5rem;">The team</h2>
+    <div class="team-grid" style="grid-template-columns: 1fr; max-width: 400px; margin: 0 auto 5rem;">
+      <div class="team-card">
+        <div class="avatar" style="background-image: url('images/najeeb.jpg'); background-size: cover; background-position: center;"></div>
+        <h4>Najeeb Ullah Tahir</h4>
+        <p>ML Engineer & Full Stack developer</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════ CONTACT PAGE ═══════════════════════════════════════ -->
+<div id="page-contact" class="page">
+  <div class="container">
+    <div class="contact-hero">
+      <div class="pill pill-orange" style="margin-bottom:1rem;">📬 Get in touch</div>
+      <h1>Let's work together</h1>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Bring PathIQ to your organization</h3>
+        <p>Whether you're running a summer internship program or a year-round graduate cohort, PathIQ can be deployed to provide personalized learning paths at any scale.</p>
+        <div class="contact-item"><div class="contact-icon">📧</div><div><h4>Email us</h4><p>hello@pathiq.ai</p></div></div>
+        <div class="contact-item"><div class="contact-icon">📍</div><div><h4>Location</h4><p>Lahore, Pakistan · Remote worldwide</p></div></div>
+        <div class="contact-item"><div class="contact-icon">🕐</div><div><h4>Response time</h4><p>We reply within 1–2 business days</p></div></div>
+      </div>
+      <div class="contact-form">
+        <div id="contact-form-inner">
+          <div class="form-row">
+            <div class="form-group"><label>First name</label><input type="text" placeholder="Aisha"></div>
+            <div class="form-group"><label>Last name</label><input type="text" placeholder="Rizvi"></div>
+          </div>
+          <div class="form-group"><label>Work email</label><input type="email" placeholder="aisha@company.com"></div>
+          <div class="form-group"><label>Organization</label><input type="text" placeholder="Your company or university"></div>
+          <div class="form-group"><label>Use case</label>
+            <select><option value="">Select one...</option><option>Internship program</option><option>Graduate onboarding</option><option>Corporate L&D</option><option>University / EdTech</option><option>Research collaboration</option></select>
+          </div>
+          <div class="form-group"><label>Message</label><textarea rows="4" placeholder="Tell us about your program size, timeline, and goals..."></textarea></div>
+          <button class="form-submit" onclick="submitForm()">Send message →</button>
+        </div>
+        <div class="form-success" id="form-success"><div class="check">✅</div><h3>Message sent!</h3><p>Thanks for reaching out. We'll get back to you within 1–2 business days.</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">PathIQ</div>
+    <div class="footer-links">
+      <a onclick="showPage('home')">Home</a>
+      <a onclick="showPage('system')">ML System</a>
+      <a onclick="showPage('about')">About</a>
+      <a onclick="showPage('contact')">Contact</a>
+    </div>
+    <div class="footer-copy">© 2026 PathIQ. All rights reserved.</div>
+  </div>
+</footer>
+
+</div><!-- /app -->
+
+<!-- CHANGE PASSWORD MODAL -->
+<div class="modal-overlay" id="changepw-modal">
+  <div class="modal-box">
+    <div class="modal-title">Change password</div>
+    <div class="modal-sub">Enter your current password, then choose a new one.</div>
+    <div class="auth-error" id="changepw-error" style="margin-bottom:1rem;"></div>
+    <div class="modal-field" style="margin-bottom:1rem;">
+      <label>Current password</label>
+      <div class="pw-wrap"><input type="password" id="cp-current" placeholder="Current password"><button class="pw-toggle" onclick="togglePw('cp-current',this)" type="button">👁</button></div>
+    </div>
+    <div class="modal-field" style="margin-bottom:1rem;">
+      <label>New password</label>
+      <div class="pw-wrap"><input type="password" id="cp-new" placeholder="New password (min 8 chars)"><button class="pw-toggle" onclick="togglePw('cp-new',this)" type="button">👁</button></div>
+    </div>
+    <div class="modal-field">
+      <label>Confirm new password</label>
+      <div class="pw-wrap"><input type="password" id="cp-confirm" placeholder="Repeat new password"><button class="pw-toggle" onclick="togglePw('cp-confirm',this)" type="button">👁</button></div>
+    </div>
+    <div class="modal-actions">
+      <button class="modal-btn-ghost" onclick="closeChangePw()">Cancel</button>
+      <button class="modal-btn-primary" onclick="doChangePassword()">Update password</button>
+    </div>
+  </div>
+</div>
+
+<!-- Scripts -->
+<script src="js/data.js"></script>
+<script src="js/trained-weights.js"></script>
+<script src="js/ml-engine.js"></script>
+<script src="js/evaluation.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
