@@ -1,0 +1,17 @@
+{
+  "n_factors": 8,
+  "learning_rate": 0.01,
+  "reg": 0.01,
+  "n_epochs": 200,
+  "use_bias": true,
+  "lr_decay": 0.001,
+  "patience": 15,
+  "seed": 42,
+  "verbose": true,
+  "global_mean": 2.97279792746114,
+  "n_interns": 80,
+  "n_courses": 20,
+  "final_train_rmse": 0.5603614982297868,
+  "best_val_rmse": 0.7496329655008764,
+  "trained_at": "2026-05-09T04:37:08.177759"
+}

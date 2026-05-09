@@ -1,0 +1,470 @@
+intern_id,intern_name,course_id,course_name,category,difficulty,rating,timestamp,completion_pct,role
+0,Aisha A.,2,ML Fundamentals,ML,2,3.0,2024-11-08 00:00:00,67,ML Intern
+0,Aisha A.,6,REST APIs,Engineering,3,3.0,2024-09-22 16:00:00,69,ML Intern
+0,Aisha A.,8,Statistics Basics,Data,2,3.0,2024-09-18 02:00:00,64,ML Intern
+0,Aisha A.,15,Reinforcement Learning,ML,5,4.5,2024-10-01 23:00:00,80,ML Intern
+1,Ben B.,8,Statistics Basics,Data,2,2.5,2024-10-06 18:00:00,60,Data Intern
+1,Ben B.,12,Git & DevOps,Engineering,2,2.5,2024-11-29 01:00:00,60,Data Intern
+1,Ben B.,13,A/B Testing,Data,3,3.0,2024-10-05 11:00:00,60,Data Intern
+1,Ben B.,15,Reinforcement Learning,ML,5,3.0,2024-12-09 21:00:00,60,Data Intern
+1,Ben B.,18,Technical Writing,Soft Skills,1,4.0,2024-10-07 16:00:00,82,Data Intern
+1,Ben B.,19,System Design,Engineering,4,2.5,2024-11-28 15:00:00,60,Data Intern
+2,Carlos C.,4,NLP Methods,ML,4,1.0,2024-11-14 16:00:00,60,SWE Intern
+2,Carlos C.,11,Cloud Computing,Engineering,3,4.0,2024-10-05 16:00:00,74,SWE Intern
+2,Carlos C.,12,Git & DevOps,Engineering,2,3.0,2024-09-29 09:00:00,60,SWE Intern
+2,Carlos C.,14,Time Series,ML,3,2.0,2024-11-01 20:00:00,60,SWE Intern
+2,Carlos C.,15,Reinforcement Learning,ML,5,1.0,2024-12-14 21:00:00,60,SWE Intern
+2,Carlos C.,16,Product Analytics,Product,2,3.0,2024-09-04 02:00:00,60,SWE Intern
+3,Diana D.,4,NLP Methods,ML,4,2.0,2024-12-17 16:00:00,60,Research Intern
+3,Diana D.,7,Model Deployment,Engineering,4,2.5,2024-11-14 07:00:00,60,Research Intern
+3,Diana D.,8,Statistics Basics,Data,2,2.5,2024-12-28 19:00:00,60,Research Intern
+3,Diana D.,9,Data Pipelines,Engineering,3,3.0,2024-10-17 10:00:00,68,Research Intern
+3,Diana D.,10,Computer Vision,ML,4,3.0,2024-09-24 03:00:00,60,Research Intern
+3,Diana D.,12,Git & DevOps,Engineering,2,2.5,2024-09-25 19:00:00,60,Research Intern
+3,Diana D.,19,System Design,Engineering,4,4.0,2024-10-15 23:00:00,74,Research Intern
+4,Elena E.,2,ML Fundamentals,ML,2,3.0,2024-11-25 14:00:00,69,Product Intern
+4,Elena E.,8,Statistics Basics,Data,2,3.5,2024-11-25 19:00:00,68,Product Intern
+4,Elena E.,11,Cloud Computing,Engineering,3,3.0,2024-11-23 21:00:00,60,Product Intern
+4,Elena E.,12,Git & DevOps,Engineering,2,4.0,2024-10-20 06:00:00,86,Product Intern
+4,Elena E.,19,System Design,Engineering,4,4.0,2024-09-17 12:00:00,84,Product Intern
+5,Fatima F.,6,REST APIs,Engineering,3,3.0,2024-11-03 07:00:00,67,ML Intern
+5,Fatima F.,15,Reinforcement Learning,ML,5,2.5,2024-12-25 01:00:00,60,ML Intern
+5,Fatima F.,16,Product Analytics,Product,2,3.0,2024-09-14 08:00:00,60,ML Intern
+5,Fatima F.,17,Research Methods,Research,3,3.0,2024-10-22 22:00:00,60,ML Intern
+5,Fatima F.,18,Technical Writing,Soft Skills,1,2.5,2024-09-05 14:00:00,60,ML Intern
+6,George G.,0,Python Basics,Programming,1,2.5,2024-12-18 11:00:00,60,Data Intern
+6,George G.,2,ML Fundamentals,ML,2,2.5,2024-09-29 23:00:00,60,Data Intern
+6,George G.,3,Deep Learning,ML,4,4.0,2024-12-01 18:00:00,78,Data Intern
+6,George G.,4,NLP Methods,ML,4,4.0,2024-11-28 01:00:00,78,Data Intern
+6,George G.,5,Data Visualization,Data,2,1.5,2024-11-13 12:00:00,60,Data Intern
+6,George G.,12,Git & DevOps,Engineering,2,2.5,2024-11-09 21:00:00,60,Data Intern
+6,George G.,14,Time Series,ML,3,1.5,2024-09-25 22:00:00,60,Data Intern
+6,George G.,15,Reinforcement Learning,ML,5,2.0,2024-11-08 10:00:00,60,Data Intern
+6,George G.,16,Product Analytics,Product,2,2.5,2024-12-02 03:00:00,60,Data Intern
+6,George G.,17,Research Methods,Research,3,2.5,2024-10-23 18:00:00,60,Data Intern
+6,George G.,19,System Design,Engineering,4,2.0,2024-10-04 20:00:00,60,Data Intern
+7,Hina H.,0,Python Basics,Programming,1,3.5,2024-09-17 03:00:00,72,SWE Intern
+7,Hina H.,3,Deep Learning,ML,4,2.5,2024-12-21 23:00:00,60,SWE Intern
+7,Hina H.,9,Data Pipelines,Engineering,3,3.5,2024-10-14 02:00:00,75,SWE Intern
+7,Hina H.,14,Time Series,ML,3,4.0,2024-11-13 03:00:00,71,SWE Intern
+7,Hina H.,19,System Design,Engineering,4,3.0,2024-10-17 17:00:00,69,SWE Intern
+8,Ivan I.,0,Python Basics,Programming,1,2.5,2024-09-23 21:00:00,60,Research Intern
+8,Ivan I.,9,Data Pipelines,Engineering,3,4.0,2024-11-13 12:00:00,83,Research Intern
+8,Ivan I.,10,Computer Vision,ML,4,3.5,2024-10-11 16:00:00,73,Research Intern
+8,Ivan I.,12,Git & DevOps,Engineering,2,3.5,2024-12-22 06:00:00,67,Research Intern
+8,Ivan I.,15,Reinforcement Learning,ML,5,2.0,2024-12-19 23:00:00,60,Research Intern
+8,Ivan I.,16,Product Analytics,Product,2,3.0,2024-09-10 11:00:00,60,Research Intern
+8,Ivan I.,17,Research Methods,Research,3,3.0,2024-12-07 06:00:00,61,Research Intern
+9,Jasmine J.,0,Python Basics,Programming,1,4.0,2024-09-20 16:00:00,81,Product Intern
+9,Jasmine J.,7,Model Deployment,Engineering,4,2.0,2024-10-04 23:00:00,60,Product Intern
+9,Jasmine J.,14,Time Series,ML,3,2.5,2024-09-29 03:00:00,60,Product Intern
+9,Jasmine J.,16,Product Analytics,Product,2,3.0,2024-10-02 00:00:00,69,Product Intern
+10,Khalid K.,1,SQL & Databases,Data,2,3.5,2024-09-28 18:00:00,76,ML Intern
+10,Khalid K.,4,NLP Methods,ML,4,3.0,2024-10-31 18:00:00,60,ML Intern
+10,Khalid K.,5,Data Visualization,Data,2,3.0,2024-10-10 04:00:00,60,ML Intern
+10,Khalid K.,6,REST APIs,Engineering,3,3.5,2024-10-07 06:00:00,76,ML Intern
+10,Khalid K.,8,Statistics Basics,Data,2,2.5,2024-10-07 22:00:00,60,ML Intern
+10,Khalid K.,15,Reinforcement Learning,ML,5,4.0,2024-11-24 11:00:00,89,ML Intern
+10,Khalid K.,19,System Design,Engineering,4,2.5,2024-11-15 06:00:00,60,ML Intern
+11,Luna L.,2,ML Fundamentals,ML,2,3.5,2024-09-15 04:00:00,65,Data Intern
+11,Luna L.,3,Deep Learning,ML,4,3.0,2024-09-02 00:00:00,68,Data Intern
+11,Luna L.,6,REST APIs,Engineering,3,3.5,2024-11-06 07:00:00,75,Data Intern
+11,Luna L.,9,Data Pipelines,Engineering,3,2.5,2024-12-02 21:00:00,60,Data Intern
+11,Luna L.,15,Reinforcement Learning,ML,5,3.5,2024-12-22 14:00:00,73,Data Intern
+12,Marco M.,0,Python Basics,Programming,1,2.5,2024-10-28 20:00:00,60,SWE Intern
+12,Marco M.,6,REST APIs,Engineering,3,3.5,2024-09-09 17:00:00,68,SWE Intern
+12,Marco M.,7,Model Deployment,Engineering,4,3.5,2024-10-20 22:00:00,76,SWE Intern
+12,Marco M.,10,Computer Vision,ML,4,2.5,2024-12-20 02:00:00,60,SWE Intern
+12,Marco M.,11,Cloud Computing,Engineering,3,3.0,2024-10-24 15:00:00,66,SWE Intern
+12,Marco M.,15,Reinforcement Learning,ML,5,3.0,2024-11-17 21:00:00,60,SWE Intern
+12,Marco M.,16,Product Analytics,Product,2,3.5,2024-12-11 19:00:00,62,SWE Intern
+12,Marco M.,19,System Design,Engineering,4,3.0,2024-12-19 16:00:00,63,SWE Intern
+13,Nadia N.,0,Python Basics,Programming,1,2.5,2024-10-08 05:00:00,60,Research Intern
+13,Nadia N.,1,SQL & Databases,Data,2,3.0,2024-11-21 03:00:00,60,Research Intern
+13,Nadia N.,2,ML Fundamentals,ML,2,3.5,2024-11-16 11:00:00,62,Research Intern
+13,Nadia N.,8,Statistics Basics,Data,2,2.5,2024-12-05 00:00:00,60,Research Intern
+13,Nadia N.,10,Computer Vision,ML,4,3.0,2024-09-11 15:00:00,60,Research Intern
+13,Nadia N.,12,Git & DevOps,Engineering,2,3.5,2024-09-28 09:00:00,68,Research Intern
+13,Nadia N.,17,Research Methods,Research,3,2.0,2024-11-21 08:00:00,60,Research Intern
+13,Nadia N.,18,Technical Writing,Soft Skills,1,2.5,2024-12-23 04:00:00,60,Research Intern
+14,Omar O.,3,Deep Learning,ML,4,4.0,2024-12-07 11:00:00,78,Product Intern
+14,Omar O.,4,NLP Methods,ML,4,4.0,2024-09-27 16:00:00,71,Product Intern
+14,Omar O.,6,REST APIs,Engineering,3,1.5,2024-10-04 03:00:00,60,Product Intern
+14,Omar O.,8,Statistics Basics,Data,2,4.0,2024-10-11 13:00:00,80,Product Intern
+14,Omar O.,10,Computer Vision,ML,4,4.0,2024-12-08 18:00:00,85,Product Intern
+14,Omar O.,11,Cloud Computing,Engineering,3,3.5,2024-09-24 01:00:00,76,Product Intern
+14,Omar O.,13,A/B Testing,Data,3,3.0,2024-11-24 18:00:00,65,Product Intern
+14,Omar O.,17,Research Methods,Research,3,3.0,2024-09-07 10:00:00,60,Product Intern
+14,Omar O.,18,Technical Writing,Soft Skills,1,2.0,2024-10-24 07:00:00,60,Product Intern
+14,Omar O.,19,System Design,Engineering,4,3.0,2024-09-10 10:00:00,60,Product Intern
+15,Priya P.,0,Python Basics,Programming,1,3.0,2024-10-12 02:00:00,60,ML Intern
+15,Priya P.,2,ML Fundamentals,ML,2,3.0,2024-09-25 08:00:00,60,ML Intern
+15,Priya P.,6,REST APIs,Engineering,3,2.0,2024-12-15 07:00:00,60,ML Intern
+15,Priya P.,7,Model Deployment,Engineering,4,3.0,2024-09-11 13:00:00,68,ML Intern
+15,Priya P.,10,Computer Vision,ML,4,3.5,2024-09-11 08:00:00,67,ML Intern
+15,Priya P.,12,Git & DevOps,Engineering,2,4.0,2024-11-18 08:00:00,80,ML Intern
+15,Priya P.,13,A/B Testing,Data,3,3.5,2024-11-13 16:00:00,74,ML Intern
+15,Priya P.,16,Product Analytics,Product,2,3.5,2024-12-20 13:00:00,67,ML Intern
+15,Priya P.,17,Research Methods,Research,3,2.5,2024-09-06 06:00:00,60,ML Intern
+15,Priya P.,19,System Design,Engineering,4,4.0,2024-09-10 21:00:00,82,ML Intern
+16,Qasim Q.,2,ML Fundamentals,ML,2,2.5,2024-09-07 01:00:00,60,Data Intern
+16,Qasim Q.,3,Deep Learning,ML,4,3.0,2024-09-23 01:00:00,66,Data Intern
+16,Qasim Q.,5,Data Visualization,Data,2,4.0,2024-12-12 14:00:00,75,Data Intern
+16,Qasim Q.,9,Data Pipelines,Engineering,3,3.0,2024-10-03 04:00:00,67,Data Intern
+16,Qasim Q.,13,A/B Testing,Data,3,3.5,2024-12-14 02:00:00,65,Data Intern
+16,Qasim Q.,15,Reinforcement Learning,ML,5,2.5,2024-09-26 06:00:00,60,Data Intern
+16,Qasim Q.,19,System Design,Engineering,4,3.0,2024-11-17 14:00:00,60,Data Intern
+17,Rosa R.,0,Python Basics,Programming,1,3.0,2024-10-01 06:00:00,60,SWE Intern
+17,Rosa R.,10,Computer Vision,ML,4,3.0,2024-11-12 09:00:00,60,SWE Intern
+17,Rosa R.,13,A/B Testing,Data,3,3.5,2024-11-21 15:00:00,78,SWE Intern
+18,Sara S.,0,Python Basics,Programming,1,3.0,2024-11-23 03:00:00,69,Research Intern
+18,Sara S.,6,REST APIs,Engineering,3,2.5,2024-12-10 20:00:00,60,Research Intern
+18,Sara S.,11,Cloud Computing,Engineering,3,3.0,2024-09-30 12:00:00,60,Research Intern
+18,Sara S.,15,Reinforcement Learning,ML,5,3.5,2024-11-19 09:00:00,73,Research Intern
+18,Sara S.,18,Technical Writing,Soft Skills,1,3.5,2024-10-20 18:00:00,64,Research Intern
+18,Sara S.,19,System Design,Engineering,4,3.5,2024-10-14 10:00:00,68,Research Intern
+19,Tariq T.,7,Model Deployment,Engineering,4,3.0,2024-12-29 19:00:00,62,Product Intern
+19,Tariq T.,9,Data Pipelines,Engineering,3,3.0,2024-11-27 19:00:00,68,Product Intern
+19,Tariq T.,12,Git & DevOps,Engineering,2,2.5,2024-12-04 01:00:00,60,Product Intern
+19,Tariq T.,13,A/B Testing,Data,3,3.5,2024-11-16 19:00:00,63,Product Intern
+19,Tariq T.,15,Reinforcement Learning,ML,5,3.5,2024-10-20 10:00:00,68,Product Intern
+20,Uma U.,1,SQL & Databases,Data,2,2.5,2024-09-04 17:00:00,60,ML Intern
+20,Uma U.,4,NLP Methods,ML,4,2.0,2024-12-25 08:00:00,60,ML Intern
+20,Uma U.,9,Data Pipelines,Engineering,3,3.5,2024-10-30 02:00:00,60,ML Intern
+20,Uma U.,10,Computer Vision,ML,4,3.0,2024-11-21 01:00:00,61,ML Intern
+20,Uma U.,13,A/B Testing,Data,3,3.5,2024-10-16 03:00:00,77,ML Intern
+20,Uma U.,14,Time Series,ML,3,3.0,2024-12-25 03:00:00,60,ML Intern
+20,Uma U.,15,Reinforcement Learning,ML,5,2.5,2024-09-24 18:00:00,60,ML Intern
+20,Uma U.,18,Technical Writing,Soft Skills,1,3.0,2024-12-28 09:00:00,60,ML Intern
+21,Victor V.,5,Data Visualization,Data,2,2.5,2024-09-26 04:00:00,60,Data Intern
+21,Victor V.,7,Model Deployment,Engineering,4,3.5,2024-10-12 13:00:00,63,Data Intern
+21,Victor V.,10,Computer Vision,ML,4,3.5,2024-12-21 17:00:00,66,Data Intern
+21,Victor V.,15,Reinforcement Learning,ML,5,3.5,2024-09-22 11:00:00,68,Data Intern
+21,Victor V.,16,Product Analytics,Product,2,2.0,2024-10-02 11:00:00,60,Data Intern
+22,Wren W.,0,Python Basics,Programming,1,3.5,2024-11-06 04:00:00,61,SWE Intern
+22,Wren W.,6,REST APIs,Engineering,3,3.5,2024-12-08 18:00:00,69,SWE Intern
+22,Wren W.,9,Data Pipelines,Engineering,3,2.5,2024-09-02 16:00:00,60,SWE Intern
+22,Wren W.,10,Computer Vision,ML,4,3.5,2024-09-05 16:00:00,65,SWE Intern
+22,Wren W.,18,Technical Writing,Soft Skills,1,2.5,2024-09-22 03:00:00,60,SWE Intern
+23,Xia X.,2,ML Fundamentals,ML,2,4.0,2024-11-17 20:00:00,76,Research Intern
+23,Xia X.,3,Deep Learning,ML,4,3.5,2024-10-31 14:00:00,76,Research Intern
+23,Xia X.,4,NLP Methods,ML,4,3.5,2024-12-08 20:00:00,62,Research Intern
+23,Xia X.,5,Data Visualization,Data,2,3.5,2024-09-21 07:00:00,62,Research Intern
+23,Xia X.,6,REST APIs,Engineering,3,3.5,2024-09-25 03:00:00,73,Research Intern
+23,Xia X.,10,Computer Vision,ML,4,3.5,2024-11-27 07:00:00,61,Research Intern
+23,Xia X.,11,Cloud Computing,Engineering,3,2.5,2024-11-02 08:00:00,60,Research Intern
+23,Xia X.,15,Reinforcement Learning,ML,5,3.5,2024-11-10 19:00:00,62,Research Intern
+24,Yusuf Y.,0,Python Basics,Programming,1,3.0,2024-12-20 00:00:00,65,Product Intern
+24,Yusuf Y.,2,ML Fundamentals,ML,2,2.0,2024-10-12 07:00:00,60,Product Intern
+24,Yusuf Y.,6,REST APIs,Engineering,3,3.5,2024-11-04 13:00:00,67,Product Intern
+24,Yusuf Y.,10,Computer Vision,ML,4,2.0,2024-11-17 21:00:00,60,Product Intern
+24,Yusuf Y.,12,Git & DevOps,Engineering,2,3.0,2024-10-19 00:00:00,60,Product Intern
+25,Zara Z.,0,Python Basics,Programming,1,2.5,2024-12-14 06:00:00,60,ML Intern
+25,Zara Z.,2,ML Fundamentals,ML,2,4.0,2024-11-18 22:00:00,80,ML Intern
+25,Zara Z.,11,Cloud Computing,Engineering,3,3.0,2024-10-25 02:00:00,60,ML Intern
+25,Zara Z.,12,Git & DevOps,Engineering,2,5.0,2024-10-29 12:00:00,100,ML Intern
+26,Aisha A.,2,ML Fundamentals,ML,2,3.0,2024-10-26 12:00:00,60,Data Intern
+26,Aisha A.,3,Deep Learning,ML,4,4.0,2024-11-20 11:00:00,81,Data Intern
+26,Aisha A.,5,Data Visualization,Data,2,3.0,2024-11-06 01:00:00,60,Data Intern
+26,Aisha A.,6,REST APIs,Engineering,3,3.5,2024-11-04 11:00:00,72,Data Intern
+26,Aisha A.,10,Computer Vision,ML,4,3.5,2024-12-13 14:00:00,73,Data Intern
+26,Aisha A.,11,Cloud Computing,Engineering,3,3.5,2024-12-06 01:00:00,66,Data Intern
+26,Aisha A.,17,Research Methods,Research,3,3.5,2024-11-25 20:00:00,71,Data Intern
+26,Aisha A.,19,System Design,Engineering,4,3.5,2024-11-15 14:00:00,77,Data Intern
+27,Ben B.,0,Python Basics,Programming,1,3.0,2024-12-23 09:00:00,61,SWE Intern
+27,Ben B.,1,SQL & Databases,Data,2,3.0,2024-10-15 15:00:00,63,SWE Intern
+27,Ben B.,12,Git & DevOps,Engineering,2,4.0,2024-11-05 19:00:00,83,SWE Intern
+27,Ben B.,13,A/B Testing,Data,3,3.0,2024-11-21 01:00:00,60,SWE Intern
+27,Ben B.,19,System Design,Engineering,4,3.5,2024-10-30 03:00:00,70,SWE Intern
+28,Carlos C.,7,Model Deployment,Engineering,4,4.5,2024-11-02 18:00:00,82,Research Intern
+28,Carlos C.,8,Statistics Basics,Data,2,3.5,2024-09-04 21:00:00,77,Research Intern
+28,Carlos C.,11,Cloud Computing,Engineering,3,3.5,2024-09-05 16:00:00,70,Research Intern
+28,Carlos C.,13,A/B Testing,Data,3,2.5,2024-12-28 02:00:00,60,Research Intern
+28,Carlos C.,18,Technical Writing,Soft Skills,1,4.0,2024-12-02 18:00:00,87,Research Intern
+29,Diana D.,2,ML Fundamentals,ML,2,4.0,2024-09-27 17:00:00,81,Product Intern
+29,Diana D.,13,A/B Testing,Data,3,2.5,2024-09-02 22:00:00,60,Product Intern
+29,Diana D.,18,Technical Writing,Soft Skills,1,3.0,2024-10-08 09:00:00,64,Product Intern
+30,Elena E.,6,REST APIs,Engineering,3,3.0,2024-10-11 18:00:00,67,ML Intern
+30,Elena E.,8,Statistics Basics,Data,2,3.0,2024-09-26 11:00:00,60,ML Intern
+30,Elena E.,9,Data Pipelines,Engineering,3,3.5,2024-11-05 08:00:00,64,ML Intern
+30,Elena E.,10,Computer Vision,ML,4,3.0,2024-10-30 04:00:00,60,ML Intern
+30,Elena E.,13,A/B Testing,Data,3,3.0,2024-09-28 23:00:00,60,ML Intern
+30,Elena E.,16,Product Analytics,Product,2,4.0,2024-12-24 17:00:00,82,ML Intern
+30,Elena E.,17,Research Methods,Research,3,3.0,2024-10-11 20:00:00,60,ML Intern
+31,Fatima F.,1,SQL & Databases,Data,2,3.0,2024-10-15 14:00:00,68,Data Intern
+31,Fatima F.,2,ML Fundamentals,ML,2,2.0,2024-09-27 08:00:00,60,Data Intern
+31,Fatima F.,5,Data Visualization,Data,2,1.5,2024-09-06 08:00:00,60,Data Intern
+31,Fatima F.,8,Statistics Basics,Data,2,2.5,2024-11-11 01:00:00,60,Data Intern
+31,Fatima F.,13,A/B Testing,Data,3,3.5,2024-10-27 10:00:00,75,Data Intern
+31,Fatima F.,15,Reinforcement Learning,ML,5,3.0,2024-11-26 14:00:00,63,Data Intern
+32,George G.,4,NLP Methods,ML,4,2.5,2024-09-06 20:00:00,60,SWE Intern
+32,George G.,6,REST APIs,Engineering,3,2.5,2024-12-14 13:00:00,60,SWE Intern
+32,George G.,12,Git & DevOps,Engineering,2,2.0,2024-09-02 22:00:00,60,SWE Intern
+32,George G.,13,A/B Testing,Data,3,3.0,2024-09-10 12:00:00,60,SWE Intern
+32,George G.,16,Product Analytics,Product,2,2.0,2024-11-29 03:00:00,60,SWE Intern
+32,George G.,18,Technical Writing,Soft Skills,1,4.0,2024-09-11 11:00:00,73,SWE Intern
+32,George G.,19,System Design,Engineering,4,2.5,2024-11-03 18:00:00,60,SWE Intern
+33,Hina H.,0,Python Basics,Programming,1,2.0,2024-12-02 16:00:00,60,Research Intern
+33,Hina H.,5,Data Visualization,Data,2,4.5,2024-10-24 10:00:00,94,Research Intern
+33,Hina H.,8,Statistics Basics,Data,2,2.5,2024-09-11 13:00:00,60,Research Intern
+33,Hina H.,9,Data Pipelines,Engineering,3,3.0,2024-10-26 20:00:00,60,Research Intern
+33,Hina H.,10,Computer Vision,ML,4,3.0,2024-11-07 15:00:00,60,Research Intern
+33,Hina H.,11,Cloud Computing,Engineering,3,3.0,2024-09-16 05:00:00,60,Research Intern
+33,Hina H.,14,Time Series,ML,3,1.0,2024-11-03 16:00:00,60,Research Intern
+33,Hina H.,19,System Design,Engineering,4,2.5,2024-11-11 00:00:00,60,Research Intern
+34,Ivan I.,6,REST APIs,Engineering,3,3.5,2024-12-05 07:00:00,74,Product Intern
+34,Ivan I.,12,Git & DevOps,Engineering,2,2.5,2024-11-23 10:00:00,60,Product Intern
+34,Ivan I.,14,Time Series,ML,3,3.5,2024-12-05 14:00:00,62,Product Intern
+34,Ivan I.,18,Technical Writing,Soft Skills,1,3.0,2024-11-24 21:00:00,63,Product Intern
+35,Jasmine J.,8,Statistics Basics,Data,2,1.0,2024-10-26 14:00:00,60,ML Intern
+35,Jasmine J.,9,Data Pipelines,Engineering,3,2.5,2024-09-30 06:00:00,60,ML Intern
+35,Jasmine J.,10,Computer Vision,ML,4,2.0,2024-10-24 06:00:00,60,ML Intern
+35,Jasmine J.,19,System Design,Engineering,4,3.0,2024-09-26 15:00:00,60,ML Intern
+36,Khalid K.,5,Data Visualization,Data,2,3.5,2024-09-07 00:00:00,60,Data Intern
+36,Khalid K.,6,REST APIs,Engineering,3,3.5,2024-09-25 05:00:00,72,Data Intern
+36,Khalid K.,8,Statistics Basics,Data,2,4.0,2024-12-22 18:00:00,82,Data Intern
+36,Khalid K.,9,Data Pipelines,Engineering,3,4.0,2024-12-05 18:00:00,77,Data Intern
+36,Khalid K.,10,Computer Vision,ML,4,3.0,2024-10-26 08:00:00,60,Data Intern
+36,Khalid K.,11,Cloud Computing,Engineering,3,3.0,2024-09-17 01:00:00,67,Data Intern
+36,Khalid K.,16,Product Analytics,Product,2,4.0,2024-09-11 01:00:00,81,Data Intern
+36,Khalid K.,18,Technical Writing,Soft Skills,1,2.5,2024-09-02 01:00:00,60,Data Intern
+36,Khalid K.,19,System Design,Engineering,4,4.0,2024-09-10 05:00:00,71,Data Intern
+37,Luna L.,0,Python Basics,Programming,1,2.5,2024-11-30 15:00:00,60,SWE Intern
+37,Luna L.,1,SQL & Databases,Data,2,2.5,2024-11-20 05:00:00,60,SWE Intern
+37,Luna L.,8,Statistics Basics,Data,2,3.5,2024-10-11 08:00:00,62,SWE Intern
+37,Luna L.,14,Time Series,ML,3,2.0,2024-11-08 07:00:00,60,SWE Intern
+37,Luna L.,16,Product Analytics,Product,2,3.5,2024-10-25 14:00:00,73,SWE Intern
+37,Luna L.,18,Technical Writing,Soft Skills,1,2.5,2024-09-22 18:00:00,60,SWE Intern
+38,Marco M.,2,ML Fundamentals,ML,2,2.5,2024-11-09 01:00:00,60,Research Intern
+38,Marco M.,5,Data Visualization,Data,2,2.0,2024-09-24 09:00:00,60,Research Intern
+38,Marco M.,6,REST APIs,Engineering,3,2.5,2024-10-23 13:00:00,60,Research Intern
+38,Marco M.,8,Statistics Basics,Data,2,2.5,2024-12-25 10:00:00,60,Research Intern
+38,Marco M.,12,Git & DevOps,Engineering,2,2.5,2024-10-02 14:00:00,60,Research Intern
+38,Marco M.,13,A/B Testing,Data,3,3.5,2024-10-22 01:00:00,60,Research Intern
+38,Marco M.,17,Research Methods,Research,3,2.5,2024-10-25 02:00:00,60,Research Intern
+38,Marco M.,18,Technical Writing,Soft Skills,1,3.5,2024-11-06 16:00:00,78,Research Intern
+39,Nadia N.,0,Python Basics,Programming,1,3.0,2024-09-27 20:00:00,64,Product Intern
+39,Nadia N.,1,SQL & Databases,Data,2,3.0,2024-10-07 19:00:00,60,Product Intern
+39,Nadia N.,8,Statistics Basics,Data,2,3.0,2024-10-22 17:00:00,60,Product Intern
+39,Nadia N.,19,System Design,Engineering,4,4.0,2024-11-08 17:00:00,80,Product Intern
+40,Omar O.,2,ML Fundamentals,ML,2,2.5,2024-09-05 13:00:00,60,ML Intern
+40,Omar O.,5,Data Visualization,Data,2,4.0,2024-11-21 18:00:00,73,ML Intern
+40,Omar O.,8,Statistics Basics,Data,2,3.0,2024-12-09 03:00:00,60,ML Intern
+40,Omar O.,9,Data Pipelines,Engineering,3,3.0,2024-10-19 07:00:00,60,ML Intern
+40,Omar O.,10,Computer Vision,ML,4,3.0,2024-10-07 15:00:00,60,ML Intern
+40,Omar O.,17,Research Methods,Research,3,2.5,2024-11-12 18:00:00,60,ML Intern
+41,Priya P.,6,REST APIs,Engineering,3,4.5,2024-09-20 20:00:00,96,Data Intern
+41,Priya P.,7,Model Deployment,Engineering,4,2.5,2024-09-23 03:00:00,60,Data Intern
+41,Priya P.,10,Computer Vision,ML,4,3.0,2024-09-08 07:00:00,62,Data Intern
+41,Priya P.,11,Cloud Computing,Engineering,3,2.0,2024-12-24 12:00:00,60,Data Intern
+41,Priya P.,13,A/B Testing,Data,3,3.0,2024-09-13 19:00:00,60,Data Intern
+41,Priya P.,15,Reinforcement Learning,ML,5,4.5,2024-12-02 12:00:00,89,Data Intern
+41,Priya P.,16,Product Analytics,Product,2,2.0,2024-12-29 16:00:00,60,Data Intern
+41,Priya P.,18,Technical Writing,Soft Skills,1,4.5,2024-12-28 15:00:00,89,Data Intern
+42,Qasim Q.,0,Python Basics,Programming,1,2.5,2024-12-07 05:00:00,60,SWE Intern
+42,Qasim Q.,2,ML Fundamentals,ML,2,2.5,2024-10-10 07:00:00,60,SWE Intern
+42,Qasim Q.,6,REST APIs,Engineering,3,1.5,2024-11-14 14:00:00,60,SWE Intern
+42,Qasim Q.,7,Model Deployment,Engineering,4,3.0,2024-10-15 14:00:00,62,SWE Intern
+42,Qasim Q.,8,Statistics Basics,Data,2,2.0,2024-10-15 04:00:00,60,SWE Intern
+42,Qasim Q.,9,Data Pipelines,Engineering,3,3.0,2024-12-15 06:00:00,60,SWE Intern
+43,Rosa R.,0,Python Basics,Programming,1,3.0,2024-10-14 06:00:00,60,Research Intern
+43,Rosa R.,1,SQL & Databases,Data,2,3.5,2024-12-04 04:00:00,60,Research Intern
+43,Rosa R.,2,ML Fundamentals,ML,2,3.5,2024-12-01 13:00:00,60,Research Intern
+43,Rosa R.,5,Data Visualization,Data,2,3.0,2024-12-06 22:00:00,60,Research Intern
+43,Rosa R.,15,Reinforcement Learning,ML,5,2.5,2024-11-28 19:00:00,60,Research Intern
+43,Rosa R.,18,Technical Writing,Soft Skills,1,2.5,2024-10-19 23:00:00,60,Research Intern
+44,Sara S.,4,NLP Methods,ML,4,3.0,2024-09-18 11:00:00,60,Product Intern
+44,Sara S.,15,Reinforcement Learning,ML,5,1.5,2024-11-29 18:00:00,60,Product Intern
+44,Sara S.,19,System Design,Engineering,4,4.0,2024-09-25 08:00:00,87,Product Intern
+45,Tariq T.,2,ML Fundamentals,ML,2,4.0,2024-11-13 23:00:00,81,ML Intern
+45,Tariq T.,3,Deep Learning,ML,4,3.0,2024-09-25 01:00:00,60,ML Intern
+45,Tariq T.,6,REST APIs,Engineering,3,2.5,2024-12-14 18:00:00,60,ML Intern
+45,Tariq T.,7,Model Deployment,Engineering,4,4.0,2024-10-03 20:00:00,87,ML Intern
+45,Tariq T.,8,Statistics Basics,Data,2,3.5,2024-09-15 01:00:00,67,ML Intern
+45,Tariq T.,12,Git & DevOps,Engineering,2,4.0,2024-12-27 19:00:00,82,ML Intern
+45,Tariq T.,15,Reinforcement Learning,ML,5,3.0,2024-12-20 22:00:00,60,ML Intern
+45,Tariq T.,17,Research Methods,Research,3,3.0,2024-12-26 07:00:00,60,ML Intern
+46,Uma U.,1,SQL & Databases,Data,2,3.5,2024-12-23 22:00:00,60,Data Intern
+46,Uma U.,4,NLP Methods,ML,4,2.5,2024-11-08 19:00:00,60,Data Intern
+46,Uma U.,8,Statistics Basics,Data,2,2.0,2024-10-03 14:00:00,60,Data Intern
+46,Uma U.,12,Git & DevOps,Engineering,2,3.0,2024-12-16 12:00:00,60,Data Intern
+46,Uma U.,16,Product Analytics,Product,2,2.5,2024-10-04 06:00:00,60,Data Intern
+47,Victor V.,0,Python Basics,Programming,1,3.0,2024-12-09 16:00:00,68,SWE Intern
+47,Victor V.,2,ML Fundamentals,ML,2,3.5,2024-10-30 01:00:00,79,SWE Intern
+47,Victor V.,3,Deep Learning,ML,4,1.5,2024-12-16 23:00:00,60,SWE Intern
+47,Victor V.,7,Model Deployment,Engineering,4,2.5,2024-11-07 10:00:00,60,SWE Intern
+47,Victor V.,11,Cloud Computing,Engineering,3,3.0,2024-09-06 03:00:00,62,SWE Intern
+47,Victor V.,12,Git & DevOps,Engineering,2,3.5,2024-09-06 09:00:00,73,SWE Intern
+47,Victor V.,17,Research Methods,Research,3,3.0,2024-10-11 09:00:00,64,SWE Intern
+48,Wren W.,1,SQL & Databases,Data,2,2.5,2024-12-10 09:00:00,60,Research Intern
+48,Wren W.,2,ML Fundamentals,ML,2,3.0,2024-09-22 03:00:00,66,Research Intern
+48,Wren W.,4,NLP Methods,ML,4,2.5,2024-10-21 02:00:00,60,Research Intern
+48,Wren W.,10,Computer Vision,ML,4,3.5,2024-09-06 04:00:00,60,Research Intern
+48,Wren W.,15,Reinforcement Learning,ML,5,3.5,2024-10-04 08:00:00,60,Research Intern
+48,Wren W.,18,Technical Writing,Soft Skills,1,2.0,2024-12-25 00:00:00,60,Research Intern
+49,Xia X.,3,Deep Learning,ML,4,3.5,2024-09-19 05:00:00,61,Product Intern
+49,Xia X.,4,NLP Methods,ML,4,3.0,2024-10-30 23:00:00,60,Product Intern
+49,Xia X.,6,REST APIs,Engineering,3,3.5,2024-09-04 14:00:00,71,Product Intern
+49,Xia X.,13,A/B Testing,Data,3,2.5,2024-09-12 04:00:00,60,Product Intern
+50,Yusuf Y.,0,Python Basics,Programming,1,4.0,2024-10-12 14:00:00,73,ML Intern
+50,Yusuf Y.,6,REST APIs,Engineering,3,2.5,2024-10-28 20:00:00,60,ML Intern
+50,Yusuf Y.,12,Git & DevOps,Engineering,2,2.0,2024-10-30 04:00:00,60,ML Intern
+50,Yusuf Y.,14,Time Series,ML,3,1.5,2024-10-04 05:00:00,60,ML Intern
+50,Yusuf Y.,16,Product Analytics,Product,2,3.0,2024-11-09 03:00:00,62,ML Intern
+51,Zara Z.,0,Python Basics,Programming,1,3.5,2024-10-17 22:00:00,79,Data Intern
+51,Zara Z.,4,NLP Methods,ML,4,3.5,2024-11-27 05:00:00,72,Data Intern
+51,Zara Z.,6,REST APIs,Engineering,3,3.5,2024-12-01 11:00:00,77,Data Intern
+51,Zara Z.,10,Computer Vision,ML,4,3.5,2024-10-14 21:00:00,69,Data Intern
+51,Zara Z.,12,Git & DevOps,Engineering,2,3.0,2024-10-27 16:00:00,69,Data Intern
+51,Zara Z.,17,Research Methods,Research,3,3.5,2024-12-22 00:00:00,78,Data Intern
+51,Zara Z.,18,Technical Writing,Soft Skills,1,3.5,2024-10-30 00:00:00,77,Data Intern
+51,Zara Z.,19,System Design,Engineering,4,1.5,2024-09-21 00:00:00,60,Data Intern
+52,Aisha A.,0,Python Basics,Programming,1,3.5,2024-09-25 23:00:00,72,SWE Intern
+52,Aisha A.,3,Deep Learning,ML,4,2.5,2024-11-21 01:00:00,60,SWE Intern
+52,Aisha A.,5,Data Visualization,Data,2,2.0,2024-12-29 03:00:00,60,SWE Intern
+52,Aisha A.,6,REST APIs,Engineering,3,3.0,2024-11-19 16:00:00,60,SWE Intern
+52,Aisha A.,8,Statistics Basics,Data,2,5.0,2024-11-18 13:00:00,96,SWE Intern
+52,Aisha A.,15,Reinforcement Learning,ML,5,2.0,2024-10-29 21:00:00,60,SWE Intern
+52,Aisha A.,16,Product Analytics,Product,2,4.5,2024-10-24 23:00:00,99,SWE Intern
+52,Aisha A.,19,System Design,Engineering,4,3.5,2024-09-19 10:00:00,77,SWE Intern
+53,Ben B.,5,Data Visualization,Data,2,1.5,2024-10-03 23:00:00,60,Research Intern
+53,Ben B.,11,Cloud Computing,Engineering,3,3.0,2024-11-11 17:00:00,62,Research Intern
+53,Ben B.,12,Git & DevOps,Engineering,2,2.5,2024-09-22 21:00:00,60,Research Intern
+53,Ben B.,14,Time Series,ML,3,2.5,2024-11-25 15:00:00,60,Research Intern
+53,Ben B.,15,Reinforcement Learning,ML,5,3.0,2024-12-09 19:00:00,69,Research Intern
+53,Ben B.,16,Product Analytics,Product,2,2.5,2024-12-06 09:00:00,60,Research Intern
+54,Carlos C.,3,Deep Learning,ML,4,2.0,2024-10-18 15:00:00,60,Product Intern
+54,Carlos C.,4,NLP Methods,ML,4,3.0,2024-11-02 14:00:00,67,Product Intern
+54,Carlos C.,5,Data Visualization,Data,2,4.5,2024-09-19 02:00:00,95,Product Intern
+54,Carlos C.,13,A/B Testing,Data,3,3.5,2024-09-06 07:00:00,70,Product Intern
+54,Carlos C.,15,Reinforcement Learning,ML,5,2.0,2024-11-17 18:00:00,60,Product Intern
+55,Diana D.,5,Data Visualization,Data,2,3.0,2024-09-16 00:00:00,68,ML Intern
+55,Diana D.,7,Model Deployment,Engineering,4,4.0,2024-09-05 19:00:00,83,ML Intern
+55,Diana D.,9,Data Pipelines,Engineering,3,3.5,2024-09-01 17:00:00,60,ML Intern
+55,Diana D.,10,Computer Vision,ML,4,3.0,2024-12-05 12:00:00,60,ML Intern
+55,Diana D.,13,A/B Testing,Data,3,3.0,2024-11-15 23:00:00,69,ML Intern
+55,Diana D.,17,Research Methods,Research,3,2.5,2024-10-02 09:00:00,60,ML Intern
+55,Diana D.,18,Technical Writing,Soft Skills,1,3.0,2024-12-10 08:00:00,60,ML Intern
+56,Elena E.,3,Deep Learning,ML,4,3.0,2024-12-04 13:00:00,60,Data Intern
+56,Elena E.,7,Model Deployment,Engineering,4,3.5,2024-10-11 12:00:00,60,Data Intern
+56,Elena E.,15,Reinforcement Learning,ML,5,2.5,2024-12-19 00:00:00,60,Data Intern
+56,Elena E.,16,Product Analytics,Product,2,1.5,2024-09-19 01:00:00,60,Data Intern
+56,Elena E.,17,Research Methods,Research,3,2.5,2024-12-23 23:00:00,60,Data Intern
+56,Elena E.,19,System Design,Engineering,4,2.0,2024-10-10 06:00:00,60,Data Intern
+57,Fatima F.,11,Cloud Computing,Engineering,3,3.5,2024-11-06 01:00:00,65,SWE Intern
+57,Fatima F.,12,Git & DevOps,Engineering,2,2.0,2024-10-31 06:00:00,60,SWE Intern
+57,Fatima F.,16,Product Analytics,Product,2,3.0,2024-12-15 13:00:00,60,SWE Intern
+58,George G.,2,ML Fundamentals,ML,2,3.0,2024-10-22 00:00:00,60,Research Intern
+58,George G.,5,Data Visualization,Data,2,3.0,2024-12-25 20:00:00,60,Research Intern
+58,George G.,6,REST APIs,Engineering,3,3.5,2024-10-31 02:00:00,71,Research Intern
+58,George G.,10,Computer Vision,ML,4,3.0,2024-09-30 05:00:00,60,Research Intern
+58,George G.,12,Git & DevOps,Engineering,2,3.0,2024-12-13 22:00:00,60,Research Intern
+59,Hina H.,0,Python Basics,Programming,1,3.0,2024-10-14 01:00:00,65,Product Intern
+59,Hina H.,2,ML Fundamentals,ML,2,2.5,2024-10-01 20:00:00,60,Product Intern
+59,Hina H.,7,Model Deployment,Engineering,4,3.0,2024-09-08 23:00:00,65,Product Intern
+59,Hina H.,13,A/B Testing,Data,3,2.5,2024-09-14 00:00:00,60,Product Intern
+59,Hina H.,14,Time Series,ML,3,3.0,2024-10-01 20:00:00,60,Product Intern
+60,Ivan I.,7,Model Deployment,Engineering,4,3.0,2024-12-19 03:00:00,60,ML Intern
+60,Ivan I.,11,Cloud Computing,Engineering,3,3.0,2024-11-21 07:00:00,61,ML Intern
+60,Ivan I.,15,Reinforcement Learning,ML,5,3.5,2024-09-02 17:00:00,78,ML Intern
+60,Ivan I.,16,Product Analytics,Product,2,3.0,2024-10-11 08:00:00,62,ML Intern
+60,Ivan I.,18,Technical Writing,Soft Skills,1,3.0,2024-09-10 00:00:00,64,ML Intern
+60,Ivan I.,19,System Design,Engineering,4,2.5,2024-12-01 19:00:00,60,ML Intern
+61,Jasmine J.,0,Python Basics,Programming,1,3.0,2024-10-16 18:00:00,60,Data Intern
+61,Jasmine J.,4,NLP Methods,ML,4,3.5,2024-11-11 03:00:00,67,Data Intern
+61,Jasmine J.,8,Statistics Basics,Data,2,3.5,2024-10-11 19:00:00,63,Data Intern
+61,Jasmine J.,9,Data Pipelines,Engineering,3,4.0,2024-12-29 05:00:00,80,Data Intern
+61,Jasmine J.,11,Cloud Computing,Engineering,3,3.0,2024-12-05 20:00:00,60,Data Intern
+61,Jasmine J.,13,A/B Testing,Data,3,3.0,2024-09-19 13:00:00,60,Data Intern
+61,Jasmine J.,16,Product Analytics,Product,2,2.5,2024-12-02 18:00:00,60,Data Intern
+61,Jasmine J.,18,Technical Writing,Soft Skills,1,3.5,2024-11-14 05:00:00,74,Data Intern
+62,Khalid K.,7,Model Deployment,Engineering,4,3.0,2024-10-01 09:00:00,63,SWE Intern
+62,Khalid K.,8,Statistics Basics,Data,2,2.0,2024-10-20 22:00:00,60,SWE Intern
+62,Khalid K.,10,Computer Vision,ML,4,2.0,2024-11-29 10:00:00,60,SWE Intern
+62,Khalid K.,13,A/B Testing,Data,3,2.5,2024-11-11 19:00:00,60,SWE Intern
+62,Khalid K.,14,Time Series,ML,3,3.0,2024-10-02 01:00:00,60,SWE Intern
+62,Khalid K.,16,Product Analytics,Product,2,2.0,2024-09-10 06:00:00,60,SWE Intern
+62,Khalid K.,18,Technical Writing,Soft Skills,1,4.0,2024-12-12 22:00:00,84,SWE Intern
+63,Luna L.,4,NLP Methods,ML,4,3.5,2024-09-23 00:00:00,73,Research Intern
+63,Luna L.,14,Time Series,ML,3,2.5,2024-12-02 09:00:00,60,Research Intern
+63,Luna L.,15,Reinforcement Learning,ML,5,3.0,2024-10-17 23:00:00,60,Research Intern
+64,Marco M.,5,Data Visualization,Data,2,3.5,2024-10-01 20:00:00,76,Product Intern
+64,Marco M.,6,REST APIs,Engineering,3,2.5,2024-10-24 00:00:00,60,Product Intern
+64,Marco M.,9,Data Pipelines,Engineering,3,3.5,2024-10-12 20:00:00,62,Product Intern
+64,Marco M.,10,Computer Vision,ML,4,3.0,2024-11-24 11:00:00,60,Product Intern
+64,Marco M.,19,System Design,Engineering,4,3.0,2024-09-09 02:00:00,60,Product Intern
+65,Nadia N.,4,NLP Methods,ML,4,2.5,2024-12-24 20:00:00,60,ML Intern
+65,Nadia N.,7,Model Deployment,Engineering,4,3.0,2024-09-08 06:00:00,60,ML Intern
+65,Nadia N.,9,Data Pipelines,Engineering,3,2.5,2024-12-04 04:00:00,60,ML Intern
+65,Nadia N.,14,Time Series,ML,3,2.5,2024-11-23 05:00:00,60,ML Intern
+65,Nadia N.,15,Reinforcement Learning,ML,5,3.5,2024-11-20 22:00:00,74,ML Intern
+65,Nadia N.,18,Technical Writing,Soft Skills,1,3.5,2024-12-25 07:00:00,63,ML Intern
+65,Nadia N.,19,System Design,Engineering,4,2.0,2024-09-09 12:00:00,60,ML Intern
+66,Omar O.,3,Deep Learning,ML,4,2.5,2024-10-30 08:00:00,60,Data Intern
+66,Omar O.,6,REST APIs,Engineering,3,3.5,2024-09-12 14:00:00,68,Data Intern
+66,Omar O.,15,Reinforcement Learning,ML,5,2.5,2024-10-11 20:00:00,60,Data Intern
+66,Omar O.,16,Product Analytics,Product,2,2.5,2024-11-02 11:00:00,60,Data Intern
+67,Priya P.,10,Computer Vision,ML,4,3.0,2024-12-29 16:00:00,63,SWE Intern
+67,Priya P.,11,Cloud Computing,Engineering,3,4.0,2024-09-04 12:00:00,73,SWE Intern
+67,Priya P.,17,Research Methods,Research,3,3.5,2024-11-22 08:00:00,68,SWE Intern
+67,Priya P.,19,System Design,Engineering,4,3.5,2024-12-12 18:00:00,66,SWE Intern
+68,Qasim Q.,2,ML Fundamentals,ML,2,2.5,2024-10-17 17:00:00,60,Research Intern
+68,Qasim Q.,7,Model Deployment,Engineering,4,3.5,2024-11-03 20:00:00,62,Research Intern
+68,Qasim Q.,9,Data Pipelines,Engineering,3,3.0,2024-09-06 09:00:00,61,Research Intern
+68,Qasim Q.,10,Computer Vision,ML,4,2.5,2024-09-02 13:00:00,60,Research Intern
+68,Qasim Q.,11,Cloud Computing,Engineering,3,3.5,2024-09-19 17:00:00,78,Research Intern
+68,Qasim Q.,14,Time Series,ML,3,3.0,2024-12-02 12:00:00,60,Research Intern
+69,Rosa R.,2,ML Fundamentals,ML,2,3.5,2024-10-22 01:00:00,63,Product Intern
+69,Rosa R.,4,NLP Methods,ML,4,2.5,2024-09-23 23:00:00,60,Product Intern
+69,Rosa R.,6,REST APIs,Engineering,3,3.5,2024-09-16 19:00:00,74,Product Intern
+69,Rosa R.,8,Statistics Basics,Data,2,3.5,2024-11-28 15:00:00,61,Product Intern
+69,Rosa R.,10,Computer Vision,ML,4,3.0,2024-10-12 17:00:00,60,Product Intern
+69,Rosa R.,12,Git & DevOps,Engineering,2,3.0,2024-12-27 16:00:00,60,Product Intern
+69,Rosa R.,13,A/B Testing,Data,3,2.5,2024-11-06 20:00:00,60,Product Intern
+69,Rosa R.,16,Product Analytics,Product,2,4.0,2024-11-22 18:00:00,83,Product Intern
+69,Rosa R.,18,Technical Writing,Soft Skills,1,2.5,2024-11-15 18:00:00,60,Product Intern
+70,Sara S.,1,SQL & Databases,Data,2,2.5,2024-09-18 11:00:00,60,ML Intern
+70,Sara S.,3,Deep Learning,ML,4,3.5,2024-10-12 17:00:00,61,ML Intern
+70,Sara S.,12,Git & DevOps,Engineering,2,3.0,2024-12-20 13:00:00,60,ML Intern
+70,Sara S.,17,Research Methods,Research,3,2.0,2024-12-03 09:00:00,60,ML Intern
+71,Tariq T.,2,ML Fundamentals,ML,2,2.5,2024-09-03 10:00:00,60,Data Intern
+71,Tariq T.,4,NLP Methods,ML,4,3.0,2024-10-06 05:00:00,60,Data Intern
+71,Tariq T.,7,Model Deployment,Engineering,4,3.0,2024-12-15 20:00:00,60,Data Intern
+72,Uma U.,0,Python Basics,Programming,1,2.5,2024-09-24 15:00:00,60,SWE Intern
+72,Uma U.,2,ML Fundamentals,ML,2,3.0,2024-11-18 06:00:00,60,SWE Intern
+72,Uma U.,10,Computer Vision,ML,4,3.0,2024-10-06 00:00:00,66,SWE Intern
+72,Uma U.,13,A/B Testing,Data,3,3.0,2024-11-02 12:00:00,60,SWE Intern
+72,Uma U.,17,Research Methods,Research,3,4.0,2024-09-17 16:00:00,79,SWE Intern
+72,Uma U.,18,Technical Writing,Soft Skills,1,4.0,2024-11-27 17:00:00,72,SWE Intern
+73,Victor V.,1,SQL & Databases,Data,2,3.0,2024-09-20 21:00:00,69,Research Intern
+73,Victor V.,10,Computer Vision,ML,4,3.5,2024-09-28 10:00:00,64,Research Intern
+73,Victor V.,17,Research Methods,Research,3,3.5,2024-11-17 04:00:00,70,Research Intern
+73,Victor V.,18,Technical Writing,Soft Skills,1,2.5,2024-12-02 17:00:00,60,Research Intern
+74,Wren W.,2,ML Fundamentals,ML,2,2.5,2024-12-17 12:00:00,60,Product Intern
+74,Wren W.,3,Deep Learning,ML,4,4.0,2024-09-17 19:00:00,89,Product Intern
+74,Wren W.,6,REST APIs,Engineering,3,4.0,2024-10-27 07:00:00,84,Product Intern
+74,Wren W.,11,Cloud Computing,Engineering,3,2.0,2024-09-14 02:00:00,60,Product Intern
+74,Wren W.,12,Git & DevOps,Engineering,2,3.0,2024-11-04 21:00:00,68,Product Intern
+75,Xia X.,5,Data Visualization,Data,2,3.5,2024-09-28 01:00:00,74,ML Intern
+75,Xia X.,8,Statistics Basics,Data,2,3.0,2024-12-19 22:00:00,60,ML Intern
+75,Xia X.,9,Data Pipelines,Engineering,3,3.0,2024-11-28 00:00:00,63,ML Intern
+75,Xia X.,11,Cloud Computing,Engineering,3,3.0,2024-10-12 19:00:00,60,ML Intern
+76,Yusuf Y.,3,Deep Learning,ML,4,2.5,2024-11-10 02:00:00,60,Data Intern
+76,Yusuf Y.,4,NLP Methods,ML,4,1.5,2024-11-20 09:00:00,60,Data Intern
+76,Yusuf Y.,5,Data Visualization,Data,2,2.5,2024-09-16 23:00:00,60,Data Intern
+76,Yusuf Y.,7,Model Deployment,Engineering,4,4.0,2024-11-02 08:00:00,71,Data Intern
+76,Yusuf Y.,14,Time Series,ML,3,4.0,2024-12-07 14:00:00,80,Data Intern
+76,Yusuf Y.,17,Research Methods,Research,3,3.5,2024-12-27 09:00:00,68,Data Intern
+77,Zara Z.,9,Data Pipelines,Engineering,3,2.5,2024-10-16 12:00:00,60,SWE Intern
+77,Zara Z.,16,Product Analytics,Product,2,2.0,2024-09-05 19:00:00,60,SWE Intern
+77,Zara Z.,17,Research Methods,Research,3,3.0,2024-10-24 20:00:00,65,SWE Intern
+77,Zara Z.,19,System Design,Engineering,4,3.0,2024-11-04 00:00:00,60,SWE Intern
+78,Aisha A.,4,NLP Methods,ML,4,3.5,2024-11-16 07:00:00,70,Research Intern
+78,Aisha A.,7,Model Deployment,Engineering,4,3.0,2024-12-23 02:00:00,60,Research Intern
+78,Aisha A.,11,Cloud Computing,Engineering,3,3.5,2024-09-07 10:00:00,67,Research Intern
+78,Aisha A.,12,Git & DevOps,Engineering,2,3.0,2024-09-13 07:00:00,63,Research Intern
+78,Aisha A.,16,Product Analytics,Product,2,3.5,2024-12-09 01:00:00,67,Research Intern
+78,Aisha A.,19,System Design,Engineering,4,2.0,2024-10-05 13:00:00,60,Research Intern
+79,Ben B.,3,Deep Learning,ML,4,2.0,2024-09-14 23:00:00,60,Product Intern
+79,Ben B.,10,Computer Vision,ML,4,2.0,2024-10-07 06:00:00,60,Product Intern
+79,Ben B.,15,Reinforcement Learning,ML,5,3.0,2024-12-14 10:00:00,62,Product Intern

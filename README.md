@@ -32,6 +32,8 @@ learnpath-engine/
 │   ├── script.js       # UI Controller and orchestration
 │   ├── data.js         # Course and intern datasets
 │   └── trained-weights.js # Pre-computed model artifacts
+├── data/               # Raw datasets (CSV)
+├── artifacts/          # ML training artifacts (matrices, plots)
 ├── images/             # Static assets and media
 ├── docs/               # Architecture and standards documentation
 ├── scripts/            # Utility and automation scripts
