@@ -257,3 +257,8 @@ class MatrixFactorization {
       .slice(0, topN);
   }
 }
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { MatrixFactorization };
+}
+

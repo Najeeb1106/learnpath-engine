@@ -1,0 +1,20 @@
+{
+  "name": "learnpath-engine",
+  "version": "2.0.0",
+  "description": "Professional Matrix Factorization Recommendation Engine for Personalized Learning Paths",
+  "main": "js/ml-engine.js",
+  "scripts": {
+    "test": "node tests/ml-engine.test.js",
+    "start": "npx http-server -p 8000 ."
+  },
+  "keywords": [
+    "recommendation-system",
+    "matrix-factorization",
+    "machine-learning",
+    "stochastic-gradient-descent",
+    "learning-path",
+    "pathiq"
+  ],
+  "author": "Najeeb Ullah Tahir",
+  "license": "MIT"
+}
